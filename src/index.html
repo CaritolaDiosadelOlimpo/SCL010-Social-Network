@@ -6,31 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Social Network</title>
-
-  <!-- update the version number as needed -->
-  <!-- defer le dice al browser que no ejecute el script hasta que
-  haya terminado de cargar-->
-  <!-- Firebase App is always required and must be first -->
-  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
-
-  <!-- Add additional services that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
-
-
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCFrj9HMQv3OFzFExAfgLU9XXoj7pduvwI",
-      authDomain: "social-network-17080.firebaseapp.com",
-      databaseURL: "https://social-network-17080.firebaseio.com",
-      projectId: "social-network-17080",
-      storageBucket: "social-network-17080.appspot.com",
-      messagingSenderId: "474045729416"
-    };
-
-    firebase.initializeApp(config);
-  </script>
 </head>
 
 <body>
@@ -48,5 +23,26 @@
   
   <div id="root"></div>
   <script type="module" src="./app.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAeC0Ru4MRW8-YYFg8QWeb109k2UiQPwMA",
+        authDomain: "scl010-sport-match.firebaseapp.com",
+        databaseURL: "https://scl010-sport-match.firebaseio.com",
+        projectId: "scl010-sport-match",
+        storageBucket: "",
+        messagingSenderId: "366926164148",
+        appId: "1:366926164148:web:569624a91eb712d3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
 </body>
 </html>
