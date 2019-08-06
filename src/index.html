@@ -5,23 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Social Network</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
+  <title>Sport Match</title>
 </head>
 
 <body>
-  <h1>Social Network</h1>
-  <p>Welcome to my social network</p>
+  <!--Navbar-->
+  <nav>
+      <img src="../src/assets/img/logo-sportmatch@2x.png" alt="logo-sportmatch" class="logo">
+      <div class="nav-content">
+        <a href="#">Sobre Sport Match</a>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Contacto</a>
+        <button href="#/login" id="login">Iniciar Sesión</button>
+        <button href="#/create" id="register">Regístrate</button>
+      </div>
+  </nav>
+  <!--End navbar-->
 
-  <ul>
-    <li>
-      <a href="#/login">Login Google</a>
-    </li>
-    <li>
-      <a href="#/create">Crear cuenta</a>
-    </li>
-  </ul>
-  
-  <div id="root"></div>
+  <!--Main Content-->
+  <main class="container">
+    <h1>Social Network</h1>
+    <p>Welcome to my social network</p>
+
+    <div id="root"></div>
+  </main> 
+  <!--End Main Content-->
+
+
   <script type="module" src="./app.js"></script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
