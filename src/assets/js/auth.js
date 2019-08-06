@@ -1,30 +1,33 @@
+/* Funciones relacionadas con autentificación de usuari@s */
 
-export const loginGoogle = () =>{
-    console.log("login Ok");
+export const loginGoogle = () => {
+  // console.log('Login con Google OK');
+  const provider = new firebase.auth.GoogleAuthProvider();
 
-    var provider = new firebase.auth.GoogleAuthProvider ();
-        
-        firebase.auth().singInWithPopun(provider)
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
-            let usarName = splitGoogleDisplayName(user.displayName);
-            saveUserTodatabaseAfterLogin(user, userName);
-        })
-        .catch (err=>{
-            console.log("el error es" err)
-        })
+  // this will return a promise
+  firebase.auth().signInWithPopup(provider)
+    .then(result => {
+      const user = result.user;
+      // console.log("Hola", user.displayName);
+      let userName = splitGoogleDisplayName(user.displayName);
+      saveUserToDatabaseAfterLogin(user.uid, userName.firstName, userName.lastName, user.email);
+      // console.log(saveUserToDatabaseAfterLogin());
+      })
+    .catch(err => {
+      console.log(err);
+    })
 }
 
-const splitGoogleDisplayName = () => {
-    let splitDisplayNameArray = display.split(" ");
-    let usarName = {
-        firtsName: splitDisplayNameArray [0],
-        lastName: splitDisplayNameArray [1]
-    }
-    return usarName;
+const splitGoogleDisplayName = (displayName) => {
+  var splitDisplayNameArray = displayName.split(" ");
+  let userName = {
+    firstName: splitDisplayNameArray[0],
+    lastName: splitDisplayNameArray[1],
+  }
+
+  return userName;
 }
 
-const saveUserTodatabaseAfterLogin = (user, userName)=> {
-    console.log("uid:", user.uid, "email:", user.email, "firstName:", userName.firstName, "lastName:", userName.lastName);
-}
+const saveUserToDatabaseAfterLogin = (uid, firstName, lastName, email) => {
+  console.log(uid, firstName, lastName, email);
+};
