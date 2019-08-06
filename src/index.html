@@ -11,15 +11,38 @@
 <body>
   <h1>Social Network</h1>
   <p>Welcome to my social network</p>
+
   <ul>
-  <li>
-    <a href="#/login">Login Google</a>
-  </li>
-  <li>
-    <a href="#/create">Crear cuenta</a>
-  </li>
-</ul>
+    <li>
+      <a href="#/login">Login Google</a>
+    </li>
+    <li>
+      <a href="#/create">Crear cuenta</a>
+    </li>
+  </ul>
+  
   <div id="root"></div>
   <script type="module" src="./app.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAeC0Ru4MRW8-YYFg8QWeb109k2UiQPwMA",
+        authDomain: "scl010-sport-match.firebaseapp.com",
+        databaseURL: "https://scl010-sport-match.firebaseio.com",
+        projectId: "scl010-sport-match",
+        storageBucket: "",
+        messagingSenderId: "366926164148",
+        appId: "1:366926164148:web:569624a91eb712d3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
 </body>
 </html>
