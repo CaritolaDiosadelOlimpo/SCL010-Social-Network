@@ -13,6 +13,6 @@ export const templateLogin = () => {
   // evento del botón que llama a la autentificación de google.
   btn.addEventListener('click', () => {
     loginGoogle();
-  })
+  });
   return containerLogin;
 }
