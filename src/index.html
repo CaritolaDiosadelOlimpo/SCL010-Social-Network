@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 
 <head>
@@ -18,7 +18,7 @@
         <a href="#">Sobre Sport Match</a>
         <a href="#">Preguntas frecuentes</a>
         <a href="#">Contacto</a>
-        <button href="#/login" id="login">Iniciar Sesión</button>
+        <button href="#/login" onclick="googleSignIn()" id="login">Iniciar Sesión</button>
         <button href="#/create" id="register">Regístrate</button>
       </div>
   </nav>
@@ -29,32 +29,80 @@
     <h1>Social Network</h1>
     <p>Welcome to my social network</p>
 
-    <div id="root"></div>
-  </main> 
-  <!--End Main Content-->
 
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 
-  <script type="module" src="./app.js"></script>
-
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script> -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
 
     <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyAeC0Ru4MRW8-YYFg8QWeb109k2UiQPwMA",
-        authDomain: "scl010-sport-match.firebaseapp.com",
-        databaseURL: "https://scl010-sport-match.firebaseio.com",
-        projectId: "scl010-sport-match",
-        storageBucket: "",
-        messagingSenderId: "366926164148",
-        appId: "1:366926164148:web:569624a91eb712d3"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+          apiKey: "AIzaSyAeC0Ru4MRW8-YYFg8QWeb109k2UiQPwMA",
+          authDomain: "scl010-sport-match.firebaseapp.com",
+          databaseURL: "https://scl010-sport-match.firebaseio.com",
+          projectId: "scl010-sport-match",
+          storageBucket: "",
+          messagingSenderId: "366926164148",
+          appId: "1:366926164148:web:569624a91eb712d3"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      googleSignIn=() => {
+        console.log("topo")
+        var base_provider = new firebase.auth.GoogleAuthProvider()
+        firebase.auth().signInWithPopup(base_provider).then(function(result){
+          console.log(result)
+          console.log("Login Exitoso... Cuenta de Google Linkeada") //probar 
+          return true //probar si esto retorna true, para hacer la prueba unitaria(hay que ver si sirve para esta promesa)
+
+        }).catch(function(err){
+          console.log("Error al Logearse.")
+          console.log(err)
+          return false //probar si esto retorna false para hacer la prueba unitaria (ver si sirve en una promesas)
+        })
+
+        // firebase.auth().getRedirectResult().then(function(result) {
+        //   if (result.credential) {
+        //     // This gives you a Google Access Token. You can use it to access the Google API.
+        //     var token = result.credential.accessToken;
+        //     // ...
+        //     console.log("topo 2")
+        //     console.log(result)
+        //   }
+        //   // The signed-in user info.
+        //   var user = result.user;
+        // }).catch(function(error) {
+        //   // Handle Errors here.
+        //   var errorCode = error.code;
+        //   var errorMessage = error.message;
+        //   // The email of the user's account used.
+        //   var email = error.email;
+        //   // The firebase.auth.AuthCredential type that was used.
+        //   var credential = error.credential;
+        //   // ...
+        //   console.log("topo 3")
+        //   console.log(error)
+        // });
+      }
     </script>
+
+    <div id="root"></div>
+  </main> 
+  <!--End Main Content-->
+
+
+
+
+
+
 </body>
 </html>
+
+
