@@ -7,42 +7,55 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://use.fontawesome.com/bb3c1ead4e.js"></script>
   <link rel="stylesheet" href="assets/css/main.css"/>
-  <link rel="stylesheet" href="assets/css/templateHome.css" />
+  <link rel="stylesheet" href="assets/nav-toogle/nav.css">
+  <link rel="stylesheet" href="assets/css/responsive.css"/>
+  <link rel="stylesheet" href="assets/css/templateHome.css"/>
+  <link rel="stylesheet" href="assets/css/templateLogin.css"/>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <title>Sport Match</title>
 </head>
 
 <body>
-  <!--Navbar-->
-  <nav>
-      <a href="#/home"><img src="https://firebasestorage.googleapis.com/v0/b/scl010-sport-match.appspot.com/o/logo-sportmatch%402x.png?alt=media&token=ece8e781-5a3d-4f8f-b5ee-60ab753983c3" alt="logo-sportmatch" class="logo"></a>
-      <div class="nav-content">
-        <a href="#/home">Inicio</a>
-        <a href="#">Sobre Sport Match</a>
-        <a href="#">Preguntas frecuentes</a>
-        <a href="#">Contacto</a>
-        <a href="#/login" id="login-btn">Iniciar Sesión</a>
-        <a href="#/create" id="register-btn">Regístrate</a>
+  <div class="main-nav">
+      <div class="nav-toggle">
+          <div class="nav-toggle-bar"></div>
       </div>
-  </nav>
+      <a href="#/home"><img src="https://firebasestorage.googleapis.com/v0/b/scl010-sport-match.appspot.com/o/logo-sportmatch%402x.png?alt=media&token=ece8e781-5a3d-4f8f-b5ee-60ab753983c3" alt="logo-sportmatch" class="logo"></a>
+      <a href="#/login" id="login-btn">Iniciar Sesión</a>
+      <a href="#/create" id="register-btn">Regístrate</a>
+      <nav class="nav">
+          <div class="nav-content">
+            <a href="#/home">Inicio</a>
+            <a href="#">Sobre Sport Match</a>
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Contacto</a>
+            <a href="#">Iniciar Sesión</a>
+            <a href="#">Regístrate</a>
+          </div>
+      </nav>
+    
+  </div>
+<!--Navbar-->
   <!--End navbar-->
 
   <!--Main Content-->
   <main>
-    <div id="root"></div>
+            <div id="root"></div>
   </main> 
   <!--End Main Content-->
 
 
   <script type="module" src="./app.js"></script>
+  <script type="module" src="assets/js/nav.js"></script>
+
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
 
   <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
 
 <script>
   // Your web app's Firebase configuration

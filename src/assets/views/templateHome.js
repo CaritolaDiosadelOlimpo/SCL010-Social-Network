@@ -5,8 +5,6 @@ export const templateHome = () => {
 
   // creamos el contenido del login
   const contentHome = `
-
-
   <div class="home-banner">
     <div class="banner-content container">
       <h1>El mundo te espera</h1>
@@ -40,9 +38,7 @@ export const templateHome = () => {
             </div>
         </div>
     </div>
-  
-  </div>
-                      `;
+  </div>`;
 
   // pasar el contenido al div
   containerHome.innerHTML = contentHome;
