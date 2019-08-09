@@ -6,4 +6,17 @@
     nav img {
         margin-left: 0px;
     }
+    .main-nav img {
+        margin-left: 0px
+    }
  }
+
+ @media (max-width: 600px) { 
+    #login-btn {
+        display: none;
+    }
+    #register-btn {
+        display: none;
+    }
+
+}
