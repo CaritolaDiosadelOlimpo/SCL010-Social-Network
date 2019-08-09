@@ -18,7 +18,7 @@
   right: 2rem;
   position: absolute;
   top: 2rem;
-  width: 3.6rem;
+  width: 2.6rem;
   z-index: 2; }
   .nav-toggle:hover {
     opacity: 0.8; }
@@ -48,7 +48,7 @@
   .nav-toggle.expanded .nav-toggle-bar {
     background: transparent; }
   .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
-    background: white;
+    background: #6570F4;
     margin-top: 0; }
   .nav-toggle.expanded .nav-toggle-bar::after {
     -ms-transform: rotate(45deg);
@@ -61,24 +61,24 @@
 
 /* nav */
 .nav {
-  -webkit-transition: left 0.5s ease;
-  -moz-transition: left 0.5s ease;
-  -ms-transition: left 0.5s ease;
-  -o-transition: left 0.5s ease;
-  transition: left 0.5s ease;
-  background: #28dde0;
+  -webkit-transition: right 0.5s ease;
+  -moz-transition: right 0.5s ease;
+  -ms-transition: right 0.5s ease;
+  -o-transition: right 0.5s ease;
+  transition: right 0.5s ease;
+  background: #F0F0F0;
   color: white;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 12px;
   height: 100vh;
-  left: -20rem;
+  right: -20rem;
   padding: 6rem 2rem 2rem 2rem;
   position: fixed;
   top: 0;
   width: 20rem;
   z-index: 1; }
   .nav.expanded {
-    left: 0; }
+    right: 0; }
   .nav ul {
     position: absolute;
     top: 50%;

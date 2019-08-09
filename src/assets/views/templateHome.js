@@ -15,7 +15,7 @@ export const templateHome = () => {
 
   <div class="dark-bg">
     <div class="container center">
-      <img src="https://firebasestorage.googleapis.com/v0/b/scl010-sport-match.appspot.com/o/sportmatch-ico.png?alt=media&token=3e686acb-abc1-4e79-ac19-b373f4b6cec5" alt="sportmatch-ico">
+      <img class="ico-logo" src="https://firebasestorage.googleapis.com/v0/b/scl010-sport-match.appspot.com/o/sportmatch-ico.png?alt=media&token=3e686acb-abc1-4e79-ac19-b373f4b6cec5" alt="sportmatch-ico">
       <h4>¿Cómo funciona Sport Match?</h4>
       <p class="subtitle">Sport Match es una plataforma que te permite formar grupos de ruta a fines a tus características o metas deportivas al momento de quieras ir a una próxima aventura en trekking.</p>
     </div>
@@ -34,7 +34,7 @@ export const templateHome = () => {
             <div>
                 <h3>Armar grupos</h3>
                 <p>Crea tu propio grupo en Sport Match y benefíciate de una comunidad con múltiples miembros que comparten tus mismas pasiones.</p>
-                <a href="#/login">Empezar<i class="fas fa-arrow-right"></i></a>    
+                <a href="#/login">Empezar<span><i class="fas fa-arrow-right"></i></span></a>    
             </div>
         </div>
     </div>

@@ -27,7 +27,6 @@ h3{
 
 .dark-bg img{
     max-width: 50px;
-    padding-top: 50px;
 }
 
 .subtitle {
@@ -70,6 +69,10 @@ h3{
     }
 
 #two-columns img {
-    padding: 0 50px 0 50px;
     max-width: 120px;
-    max-height: 120px;}
+    margin-right: 40px;
+}
+
+.ico-logo{
+    margin-top: 60px;
+}
