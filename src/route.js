@@ -1,8 +1,14 @@
 import { templateLogin } from './assets/views/templateLogin.js';
 import { templateCreate } from './assets/views/templateCreate.js';
+import { templateHome } from './assets/views/templateHome.js';
 
 /* changeRouter llama a la función que carga cada template */
 const changeRouter = (hash) => {
+
+  if (hash === '#/home') {
+    return showTemplate(hash);
+  }
+
   if (hash === '#/login') {
     return showTemplate(hash);
   }
@@ -21,6 +27,9 @@ const showTemplate = (hash) => {
 
   // hacemos el match del hash utilizado y el template que queremos mostrar
   switch (router) {
+    case 'home':
+      containerRoot.appendChild(templateHome());
+    break;
     case 'login':
       containerRoot.appendChild(templateLogin());
     break;
@@ -35,7 +44,7 @@ const showTemplate = (hash) => {
 
 /* initRouter es la función que 'escucha' los cambios de hash */
 export const initRouter = () => {
-  window.addEventListener('load', changeRouter(window.location.hash));
+  window.addEventListener('load', changeRouter(window.location.hash), templateHome);
 
   // reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
   if ('onhashchange' in window) {
