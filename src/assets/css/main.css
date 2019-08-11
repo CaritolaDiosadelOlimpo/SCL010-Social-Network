@@ -97,6 +97,7 @@ a {
     background-color: #fff;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     font-size: 12px;
 }
@@ -108,7 +109,7 @@ a {
 }
 
 .nav-content{
-    margin-right: 80px;
+    display: grid;
 }
 
 nav a {

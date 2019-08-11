@@ -15,7 +15,7 @@
 	.nav-toggle-bar::before {
 		@include center-vertically;
 		@include transition(all 0.5s ease);
-		background: $nav-toggle-bar-color;
+		background: #6570F4;
 		content: '';
 		height: $nav-toggle-bar-height;
 		width: 100%;
@@ -26,7 +26,7 @@
 	&.expanded .nav-toggle-bar { background: transparent; }
 	&.expanded .nav-toggle-bar::after,
 	&.expanded .nav-toggle-bar::before {
-		background: $nav-color;
+		background: #6570F4;
 		margin-top: 0;
 	}
 	&.expanded .nav-toggle-bar::after { @include transform(rotate(45deg)); }
@@ -35,8 +35,8 @@
 
 /* nav */
 .nav {
-	@include transition(left 0.5s ease);
-	background: $nav-background;
+	@include transition(right 0.5s ease);
+	background: #6570F4;
 	color: $nav-color;
 	cursor: pointer;
 	font-size: 2rem;
