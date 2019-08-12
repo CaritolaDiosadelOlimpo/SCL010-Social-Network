@@ -1,6 +1,5 @@
 /* Funciones relacionadas con autentificación de usuari@s */
 import { saveUserInDatabase } from './database.js';
-
 // REGISTRAR NUEVO USUARIO
 export const createAccount = () => {
   let userData = {};
@@ -46,10 +45,12 @@ const createUserWithEmail = (userData) => {
   firebase.auth().createUserWithEmailAndPassword(userData.mail, userData.pass1)
   //buscar porque res para este metdodo de firebase
   .then(result => {
+    
     const user = result.user;
     userData.uid = user.uid;
     console.log("El uid es: " + userData.uid);
-    saveUserInDatabase(userData);
+    let dbResult = saveUserInDatabase(userData);
+    user.sendEmailVerification()
   })
 
   .catch(function(error) {

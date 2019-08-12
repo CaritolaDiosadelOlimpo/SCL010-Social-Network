@@ -1,7 +1,6 @@
 import { loginGoogle } from './../js/auth.js';
 
 export const templateLogin = () => {
-  debugger;
   // creamos div que contendrá la plantilla
   const containerLogin = document.createElement('div');
   // creamos el contenido del login
