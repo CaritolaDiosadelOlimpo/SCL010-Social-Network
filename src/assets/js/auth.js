@@ -65,7 +65,7 @@ const createUserWithEmail = (userData) => {
      else if (errorCode === "auth/email-already-in-use") {
       alert ("Este correo ya existe")
     }
-    //return window.location.hash = "#/profile"
+    return window.location.hash = "#/profile"
     //let errorMessage = error.message;
   });
 }
@@ -98,6 +98,31 @@ export const loginGoogle = () => {
 //   return userName;
 // }
 
-const saveUserToDatabaseAfterLogin = (uid, firstName, lastName, email) => {
-  console.log(uid, firstName, lastName, email);
-};
+
+export const signInWithEmail = (email, password) => {
+  console.log("EMAIL:", email, "PASS:", password);
+  firebase.auth().signInWithEmailAndPassword(email, password)
+  .then(() => {
+    window.location.hash = "#/feed";
+  })
+  .catch(error => {
+    console.log("NO FUNCIONA");
+    // Handle Errors here.
+    var errorCode = error.code;
+    if (errorCode === "auth/user-not-found") {
+      alert ("Este usuario no está registrado")
+    }
+    if (errorCode === "auth/wrong-password") {
+      alert ("Contraseña incorrecta, inténtalo nuevamente")
+    }
+    else {
+      alert("Ha ocurrido un problema, inténtalo nuevamente")
+    }
+
+    console.log(errorCode);
+    var errorMessage = error.message;
+    console.log(errorMessage);
+    // ...
+  });
+
+}
