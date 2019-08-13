@@ -65,7 +65,7 @@ const createUserWithEmail = (userData) => {
      else if (errorCode === "auth/email-already-in-use") {
       alert ("Este correo ya existe")
     }
-    return window.location.hash = "#/profile"
+    //return window.location.hash = "#/profile"
     //let errorMessage = error.message;
   });
 }
@@ -88,15 +88,18 @@ export const loginGoogle = () => {
     })
 }
 
-// const splitGoogleDisplayName = (displayName) => {
-//   var splitDisplayNameArray = displayName.split(" ");
-//   let userName = {
-//     firstName: splitDisplayNameArray[0],
-//     lastName: splitDisplayNameArray[1],
-//   }
+const splitGoogleDisplayName = (displayName) => {
+  var splitDisplayNameArray = displayName.split(" ");
+  let userName = {
+    firstName: splitDisplayNameArray[0],
+    lastName: splitDisplayNameArray[1],
+  }
+  return userName;
+}
+const saveUserToDatabaseAfterLogin = (uid, firstName, lastName, email) => {
+  console.log(uid, firstName, lastName, email);
+};
 
-//   return userName;
-// }
 
 
 export const signInWithEmail = (email, password) => {
@@ -118,11 +121,16 @@ export const signInWithEmail = (email, password) => {
     else {
       alert("Ha ocurrido un problema, inténtalo nuevamente")
     }
-
     console.log(errorCode);
     var errorMessage = error.message;
     console.log(errorMessage);
-    // ...
   });
+}
 
+export const logOut = () => {
+  firebase.auth().signOut().then(() => {
+    console.log("Sign-out successful")
+  }).catch(error => {
+    // An error happened.
+  });
 }
