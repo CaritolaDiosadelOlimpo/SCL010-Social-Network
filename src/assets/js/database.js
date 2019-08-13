@@ -10,9 +10,5 @@ export const saveUserInDatabase = (userData) =>{
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
-    });
-
-    console.log("A VERSSS");
-    
-    
+    });    
 }

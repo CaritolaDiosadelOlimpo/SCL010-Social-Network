@@ -1,7 +1,6 @@
 import { loginGoogle } from './../js/auth.js';
 import { createAccount } from './../js/auth.js';
 
-
 export const templateCreate = () => {
 // creamos div que contendrá la plantilla
 const containerCreate = document.createElement('div');
@@ -17,10 +16,10 @@ const contentCreate =`<div class="container login">
                           <button class="login-btn orange-bg" id="create">Regístrate</button>
                           <button class="login-google-btn" id="login-google"><img class="google-icon" src="https://firebasestorage.googleapis.com/v0/b/scl010-sport-match.appspot.com/o/google-icon.png?alt=media&token=eb8c0a4f-cc9a-4e0b-a74d-96a1b36ae49e" alt="google-icon">Regístrate con Google</button>
                           <a href="#/login" class="small-text center purple-text margin-top">¿Ya tienes una cuenta?<br><span class="bold">Ingresa aquí</span></a>
-                       </div>
+                        </div>
                       </div>`;
-// pasar el contenido al div
 
+// pasar el contenido al div
 containerCreate.innerHTML = contentCreate;
 // le pido que busque el id del boton dentro del div creado
 const btnCreate = containerCreate.querySelector('#create');
