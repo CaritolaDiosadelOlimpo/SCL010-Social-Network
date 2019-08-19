@@ -1,4 +1,7 @@
 import { logOut } from './../js/auth.js';
+import { saveUserToDatabaseAfterLogin } from './../js/auth.js';
+
+console.log(saveUserToDatabaseAfterLogin);
 
 export const templateProfile = () => {
     console.log("Mostrando Perfil de Usuario");
@@ -17,4 +20,9 @@ export const templateProfile = () => {
     window.location.hash = "#/home";
     });
     return containerProfile;
+}
+
+export const templateProfileLoginGoogle = () => {
+    const containerProfile = document.createElement('div');
+    const contentProfile = `<h1>Bienvenido ${uid}</h1>`
 }

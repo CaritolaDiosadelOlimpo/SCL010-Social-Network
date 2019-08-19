@@ -3,6 +3,7 @@ import { templateCreate } from './assets/views/templateCreate.js';
 import { templateHome } from './assets/views/templateHome.js';
 import { templateProfile } from './assets/views/templateProfile.js';
 import { templateFeed } from './assets/views/templateFeed.js';
+import { templateCreateEvent } from './assets/views/templateCreateEvent.js'
 
 /* changeRouter llama a la función que carga cada template */
 const changeRouter = (hash) => {
@@ -29,6 +30,12 @@ const changeRouter = (hash) => {
   if (hash === '#/feed') {
     return showTemplate(hash);
   }
+
+  if (hash === '#/createEvent') {
+
+    return showTemplate(hash);
+  }
+
 }
 
 // imprimirá el template en el html
@@ -53,6 +60,9 @@ export const showTemplate = (hash) => {
     break;
     case 'feed':
       containerRoot.appendChild(templateFeed());
+    break;
+    case 'createEvent':
+      containerRoot.appendChild(templateCreateEvent());
     break;
     default:
       containerRoot.innerHTML = `<p>Error 404</p>`
