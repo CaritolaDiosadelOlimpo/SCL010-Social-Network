@@ -96,7 +96,7 @@ const splitGoogleDisplayName = (displayName) => {
   }
   return userName;
 }
-const saveUserToDatabaseAfterLogin = (uid, firstName, lastName, email) => {
+export const saveUserToDatabaseAfterLogin = (uid, firstName, lastName, email) => {
   console.log(uid, firstName, lastName, email);
 };
 
@@ -134,3 +134,19 @@ export const logOut = () => {
     // An error happened.
   });
 }
+
+export const getUser = () => {
+  var docRef = db.collection("users").doc("userData.uid");
+
+  docRef.get().then(function(doc) {
+    if (doc.exists) {
+        console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
+console.log(docRef);
+} 

@@ -3,9 +3,7 @@ export const saveUserInDatabase = (userData) =>{
 
     let db = firebase.firestore();
 
-    db.collection("users").doc(userData.uid)
-    .set(userData)
-    .add(userData)
+    db.collection("users").doc(userData.uid).set(userData).add(userData)
     .then(() => {
         console.log("Document written");
         window.location.hash = "#/profile"
@@ -18,7 +16,7 @@ export const saveUserInDatabase = (userData) =>{
 export const saveEventInDataBase = (eventData) => {
 
     let db = firebase.firestore();
-    db.collection("events").doc(eventData.uid);
+    db.collection("events").doc(eventData.uid).set(eventData)
     .then(() =>{
         console.log("documento escrito");
         window.location.hash = "#/feed"
