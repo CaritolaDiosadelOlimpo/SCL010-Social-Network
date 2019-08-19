@@ -122,14 +122,15 @@ El usuario podrá agregar amigas dentro de un botón de “invitar” en la part
 
 
 ## Diseño de la aplicación.
-![flujo inicial](https://ibb.co/X8Zcvzs)
-![guía de estilos](https://ibb.co/nBvX61s)
+![flujo inicial](http://www.imagenonline.com/imagenes/1/510-c253a502c3d995528b922a998a0c9a8ed3ff1aa3.png)
+
+![guía de estilos](http://www.imagenonline.com/imagenes/1/507-cf80a4a3b3574cb0064ad7fb81580280ed21534d.png)
 
 ### Prototipo de alta fidelidad
 
-![Home web](https://ibb.co/qdDcqjz)
+![Home web](http://www.imagenonline.com/imagenes/1/509-9830fe40375dccfbbc8a536961672a0cd0316087.jpg)
 
-![vistas mobile](https://ibb.co/f432PSk)
+![vistas mobile](http://www.imagenonline.com/imagenes/1/508-968050a8b24f44ece71703b2cc5f2ebe0703cbc3.png)
 
 
 
