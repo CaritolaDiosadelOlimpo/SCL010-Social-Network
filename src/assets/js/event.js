@@ -35,10 +35,6 @@ export const newEvent = () => {
       eventData.location &&
       eventData.date &&
       eventData.description && 
-      eventData.meetPoint){
-
-      (eventData);
-  }
-
+      eventData.meetPoint)
 
 }

@@ -1,0 +1,102 @@
+[debug] [2019-08-19T19:00:11.638Z] ----------------------------------------------------------------------
+[debug] [2019-08-19T19:00:11.642Z] Command:       /Users/Consuelo/.nvm/versions/node/v10.15.3/bin/node /Users/Consuelo/.nvm/versions/node/v10.15.3/bin/firebase serve
+[debug] [2019-08-19T19:00:11.643Z] CLI Version:   7.2.2
+[debug] [2019-08-19T19:00:11.643Z] Platform:      darwin
+[debug] [2019-08-19T19:00:11.643Z] Node Version:  v10.15.3
+[debug] [2019-08-19T19:00:11.658Z] Time:          Mon Aug 19 2019 16:00:11 GMT-0300 (Chile Summer Time)
+[debug] [2019-08-19T19:00:11.659Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-19T19:00:11.999Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-19T19:00:12.000Z] > authorizing via signed-in user
+[debug] [2019-08-19T19:00:12.000Z] [iam] checking project holiii-b1df4 for permissions ["firebase.projects.get"]
+[debug] [2019-08-19T19:00:12.008Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-08-19T19:00:12.009Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-08-19T19:00:12.604Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T19:00:12.629Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/holiii-b1df4:testIamPermissions  
+
+[debug] [2019-08-19T19:00:13.686Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T19:00:13.688Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/holiii-b1df4  
+ 
+[debug] [2019-08-19T19:00:19.796Z] <<< HTTP RESPONSE 503
+[debug] [2019-08-19T19:00:19.797Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 503, Authentication backend unavailable.
+[debug] [2019-08-19T19:00:19.813Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "Authentication backend unavailable.",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503,
+    "body": {
+      "error": {
+        "code": 503,
+        "message": "Authentication backend unavailable.",
+        "status": "UNAVAILABLE"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 19 Aug 2019 19:00:19 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebase.googleapis.com",
+        "port": 443,
+        "hostname": "firebase.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/projects/holiii-b1df4",
+        "path": "/v1beta1/projects/holiii-b1df4",
+        "href": "https://firebase.googleapis.com/v1beta1/projects/holiii-b1df4"
+      },
+      "method": "GET"
+    }
+  }
+}
+[debug] [2019-08-19T20:04:51.470Z] ----------------------------------------------------------------------
+[debug] [2019-08-19T20:04:51.475Z] Command:       /Users/Consuelo/.nvm/versions/node/v10.15.3/bin/node /Users/Consuelo/.nvm/versions/node/v10.15.3/bin/firebase serve
+[debug] [2019-08-19T20:04:51.475Z] CLI Version:   7.2.2
+[debug] [2019-08-19T20:04:51.476Z] Platform:      darwin
+[debug] [2019-08-19T20:04:51.476Z] Node Version:  v10.15.3
+[debug] [2019-08-19T20:04:51.494Z] Time:          Mon Aug 19 2019 17:04:51 GMT-0300 (Chile Summer Time)
+[debug] [2019-08-19T20:04:51.494Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-19T20:04:51.507Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-19T20:04:51.508Z] > authorizing via signed-in user
+[debug] [2019-08-19T20:04:51.508Z] [iam] checking project holiii-b1df4 for permissions ["firebase.projects.get"]
+[debug] [2019-08-19T20:04:51.510Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-08-19T20:04:51.510Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-08-19T20:04:51.716Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:04:51.740Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/holiii-b1df4:testIamPermissions  
+
+[debug] [2019-08-19T20:04:52.892Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:04:52.894Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/holiii-b1df4  
+ 
+[debug] [2019-08-19T20:04:54.120Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Consuelo/Desktop/SCL010-Social-Network'...
+[info] 
+[debug] [2019-08-19T20:04:54.125Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/holiii-b1df4/webApps/-/config  
+ 
+[debug] [2019-08-19T20:04:55.451Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: src
+[info] ✔  hosting: Local server: http://localhost:5000
