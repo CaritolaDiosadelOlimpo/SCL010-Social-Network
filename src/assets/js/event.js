@@ -31,10 +31,4 @@ export const newEvent = () => {
     alert("debes ingresar un punto de encuentro");
     return false;
   }
-  if (eventData.name &&
-      eventData.location &&
-      eventData.date &&
-      eventData.description && 
-      eventData.meetPoint)
-
 }
