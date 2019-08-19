@@ -26,7 +26,7 @@ export const templateHome = () => {
             <div>
                 <h3>Descubrir grupos</h3>
                 <p>Descubre quién organiza eventos locales que calzan con tu perfil de trekking para sumarte a ellos en una ruta</p>
-                <a href="#/create">Unirse a Sport Match<i class="fas fa-arrow-right"></i></a>    
+                <a href="#/create">Unirse a Sport Match <i class="flaticon-arrow-pointing-to-right"></i></a>    
             </div>
         </div>
         <div class="right">
@@ -34,7 +34,7 @@ export const templateHome = () => {
             <div>
                 <h3>Armar grupos</h3>
                 <p>Crea tu propio grupo en Sport Match y benefíciate de una comunidad con múltiples miembros que comparten tus mismas pasiones.</p>
-                <a href="#/login">Empezar<span><i class="fas fa-arrow-right"></i></span></a>    
+                <a href="#/login">Empezar <i class="flaticon-arrow-pointing-to-right"></i></a>    
             </div>
         </div>
     </div>
